@@ -1,17 +1,17 @@
 {
-  "name": "mean-template",
+  "name": "ng-weather",
   "version": "0.0.0",
-  "description": "The MEAN Template",
+  "description": "Angular Weather",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chyld/mean-template"
+    "url": "https://github.com/JoyP/ng-weather"
   },
-  "author": "Chyld Medford <chyld.medford@gmail.com>",
+  "author": "Joy Pratt <joympratt@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chyld/mean-template/issues"
+    "url": "https://github.com/JoyP/ng-weather/issues"
   },
-  "homepage": "https://github.com/chyld/mean-template",
+  "homepage": "https://github.com/JoyP/ng-weather",
   "dependencies": {
     "express": "^4.9.0",
     "morgan": "^1.3.0"
