@@ -1,17 +1,20 @@
 (function(){
   'use strict';
+  // the [] creates the module, otherwise it looks for an existing weather module
+  // we already installed ngRoute, so we're injecting it into this page
+  angular.module('weather', ['ngRoute'])
+  // looks for the route and injects it
+  .config(['$routeProvider', function($routeProvider){
+    $routeProvider
+    // string is URL, object is configuration
+    .when('/conditions', {templateUrl:'/views/conditions/conditions.html', controller:'ConditionsController'})
+    .otherwise({redirectTo:'/conditions'});
+  }])
 
-  angular.module('mean-template', [])
-  .controller('MainController', ['$scope', '$interval', function($scope, $interval){
-    var occupations = ['Superheroes', 'Ninjas', 'Pirates', 'Vampires', 'Aliens', 'Dragons', 'Sharks with Lasers', 'Transformers', 'I am Groot'];
+  .controller('MainController', ['$scope', function($scope){
 
-    $scope.title = 'Mean Template';
-    $scope.occupation = occupations[0];
+    $scope.title = 'Weather';
 
-    $interval(function(){
-      var rnd = Math.floor(Math.random() * occupations.length);
-      $scope.occupation = occupations[rnd];
-    }, 500);
   }]);
 })();
 
